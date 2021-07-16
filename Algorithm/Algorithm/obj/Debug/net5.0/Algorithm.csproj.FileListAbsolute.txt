@@ -1,0 +1,15 @@
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.csproj.AssemblyReference.cache
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.AssemblyInfoInputs.cache
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.AssemblyInfo.cs
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.csproj.CoreCompileInputs.cache
+/Users/yunus/Projects/Algorithm/Algorithm/bin/Debug/net5.0/Algorithm.deps.json
+/Users/yunus/Projects/Algorithm/Algorithm/bin/Debug/net5.0/Algorithm.runtimeconfig.json
+/Users/yunus/Projects/Algorithm/Algorithm/bin/Debug/net5.0/Algorithm.runtimeconfig.dev.json
+/Users/yunus/Projects/Algorithm/Algorithm/bin/Debug/net5.0/Algorithm.dll
+/Users/yunus/Projects/Algorithm/Algorithm/bin/Debug/net5.0/ref/Algorithm.dll
+/Users/yunus/Projects/Algorithm/Algorithm/bin/Debug/net5.0/Algorithm.pdb
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.dll
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/ref/Algorithm.dll
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.pdb
+/Users/yunus/Projects/Algorithm/Algorithm/obj/Debug/net5.0/Algorithm.genruntimeconfig.cache
