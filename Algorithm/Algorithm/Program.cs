@@ -326,12 +326,12 @@ namespace Algorithm
             #endregion
 
             #region Encoding Decoding
-            string key = Console.ReadLine();
-            byte[] utf8Bytes = Encoding.UTF8.GetBytes(key);
-            foreach (var item in utf8Bytes)
-            {
-                Console.WriteLine(item);
-            }
+            //string key = Console.ReadLine();
+            //byte[] utf8Bytes = Encoding.UTF8.GetBytes(key);
+            //foreach (var item in utf8Bytes)
+            //{
+            //    Console.WriteLine(item);
+            //}
             //Console.WriteLine("------------------------");
             //string message = Encoding.UTF8.GetString(utf8Bytes);
             //Console.WriteLine(Encoding.Default.GetString(utf8Bytes));
@@ -389,7 +389,7 @@ namespace Algorithm
             //}
             #endregion
 
-            #region Spilt
+            #region Split
             //string text = "Hello World!" +
             //    "Selam ke" +
 
