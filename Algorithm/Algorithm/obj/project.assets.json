@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yunus/Projects/Algorithm/Algorithm/Algorithm.csproj",
+      "projectUniqueName": "/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/Algorithm.csproj",
       "projectName": "Algorithm",
-      "projectPath": "/Users/yunus/Projects/Algorithm/Algorithm/Algorithm.csproj",
+      "projectPath": "/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/Algorithm.csproj",
       "packagesPath": "/Users/yunus/.nuget/packages/",
-      "outputPath": "/Users/yunus/Projects/Algorithm/Algorithm/obj/",
+      "outputPath": "/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
