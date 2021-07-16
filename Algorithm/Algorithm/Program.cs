@@ -327,21 +327,19 @@ namespace Algorithm
 
             #region Encoding Decoding
             string key = Console.ReadLine();
-            Console.WriteLine(key);
             byte[] utf8Bytes = Encoding.UTF8.GetBytes(key);
-            Console.WriteLine(utf8Bytes);
             foreach (var item in utf8Bytes)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine("------------------------");
-            string message = Encoding.UTF8.GetString(utf8Bytes);
-            Console.WriteLine(Encoding.Default.GetString(utf8Bytes));
-            foreach (var item in message)
-            {
-                Console.WriteLine(item);
-            }
-            Console.ReadLine();
+            //Console.WriteLine("------------------------");
+            //string message = Encoding.UTF8.GetString(utf8Bytes);
+            //Console.WriteLine(Encoding.Default.GetString(utf8Bytes));
+            //foreach (var item in message)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.ReadLine();
             ////byte[] win1252Bytes = Encoding.Convert(Encoding.UTF8, Encoding.GetEncoding("Windows-1252"), utf8Bytes);
             ////string sConvertedString = Encoding.UTF8.GetString(win1252Bytes);
             ////Console.WriteLine(sConvertedString);
@@ -419,10 +417,10 @@ namespace Algorithm
             //This
             //String";
 
-            //            string[] strings = lines.Split(Environment.NewLine,
+            //            string[] string = message.Split(Environment.NewLine,
             //                                StringSplitOptions.RemoveEmptyEntries);
 
-            //            Console.WriteLine(String.Join(',', strings));
+            //            Console.WriteLine(String.Join(',', string));
             //            Console.ReadLine();
 
             //            string lines = @"Split
@@ -435,6 +433,7 @@ namespace Algorithm
             //            Console.WriteLine(String.Join(',', strings));
             //            Console.ReadLine();
 
+            //https://www.techiedelight.com/split-string-on-newlines-csharp/
             #endregion
 
         }
