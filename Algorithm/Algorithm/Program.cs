@@ -325,6 +325,7 @@ namespace Algorithm
             //Console.ReadLine();
             #endregion
 
+            #region Encoding Decoding
             string key = Console.ReadLine();
             Console.WriteLine(key);
             byte[] utf8Bytes = Encoding.UTF8.GetBytes(key);
@@ -340,12 +341,12 @@ namespace Algorithm
             {
                 Console.WriteLine(item);
             }
-                
-            //byte[] win1252Bytes = Encoding.Convert(Encoding.UTF8, Encoding.GetEncoding("Windows-1252"), utf8Bytes);
-            //string sConvertedString = Encoding.UTF8.GetString(win1252Bytes);
-            //Console.WriteLine(sConvertedString);
-            Console.WriteLine("Incoming: " + message);
-            Console.Read();
+            Console.ReadLine();
+            ////byte[] win1252Bytes = Encoding.Convert(Encoding.UTF8, Encoding.GetEncoding("Windows-1252"), utf8Bytes);
+            ////string sConvertedString = Encoding.UTF8.GetString(win1252Bytes);
+            ////Console.WriteLine(sConvertedString);
+            //Console.WriteLine("Incoming: " + message);
+            //Console.Read();
 
             //UTF8Encoding utf8 = new UTF8Encoding();
             //String unicodeString = "masavÃ¤g";
@@ -388,10 +389,19 @@ namespace Algorithm
             //        sw.Write(Encoding.UTF8.GetString(data.ToArray()));
             //    }
             //}
+            #endregion
 
-            //string text = "Hello World!";
-            //string[] textSplit = text.Split(" ");
+            #region Spilt
+            //string text = "Hello World!" +
+            //    "Selam ke" +
+
+            //    "nabersin ke" +
+
+            //    "deneme ke";
+
+            //string[] textSplit = text.Split("\n");
             //Console.WriteLine(textSplit);
+            ////Console.WriteLine(text.Split(","));
             ////Console.WriteLine(String.Join(Environment.NewLine, textSplit));
             ////Console.WriteLine(Encoding.Default.GetString(textSplit));
             ////Console.WriteLine(Encoding.UTF8.GetString(textSplit));
@@ -400,6 +410,33 @@ namespace Algorithm
             //    Console.WriteLine(item);
             //}
             //Console.ReadLine();
+
+            //if len(messageArray) > 4 and messageArray[0] == "*SCOR" and messageArray[1] == "ID":
+            //                        imei = messageArray[2]
+            //                        inst = messageArray[3]
+            //                        oper = messageArray[4]
+            //            string lines = @"Split
+            //This
+            //String";
+
+            //            string[] strings = lines.Split(Environment.NewLine,
+            //                                StringSplitOptions.RemoveEmptyEntries);
+
+            //            Console.WriteLine(String.Join(',', strings));
+            //            Console.ReadLine();
+
+            //            string lines = @"Split
+            //This
+            //String";
+
+            //            char[] delims = new[] { '\r', '\n' };
+            //            string[] strings = lines.Split(delims, StringSplitOptions.RemoveEmptyEntries);
+
+            //            Console.WriteLine(String.Join(',', strings));
+            //            Console.ReadLine();
+
+            #endregion
+
         }
     }
 }
