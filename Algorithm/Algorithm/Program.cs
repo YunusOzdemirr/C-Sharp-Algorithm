@@ -417,6 +417,11 @@ namespace Algorithm
             //            string lines = @"Split
             //This
             //String";
+
+            //bu satırda aynı işlevi görüyor
+            // char[] delims = new[] { '\r', '\n' };
+            //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
+
             string liness = @"Incoming: POST /?Key=Split%0AThis%0AString%22 HTTP/1.1
 User-Agent: PostmanRuntime/7.28.2
 Accept: */*
@@ -426,11 +431,10 @@ Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Content-Length: 0";
 
-            char[] delims = new[] { '\r', '\n' };
-            string[] stringg = liness.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
-            string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
 
-            foreach (var word in stringg)
+            
+            string[] words = liness.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var word in words)
             {
                 Console.WriteLine($"{word},");
             }
