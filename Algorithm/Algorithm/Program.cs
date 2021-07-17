@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Algorithm
 {
@@ -416,24 +417,25 @@ namespace Algorithm
             //            string lines = @"Split
             //This
             //String";
+            string liness = @"Incoming: POST /?Key=Split%0AThis%0AString%22 HTTP/1.1
+User-Agent: PostmanRuntime/7.28.2
+Accept: */*
+Postman-Token: b349fea9-ead3-4d38-ba20-de1c94a9da6b
+Host: ec2-54-93-235-248.eu-central-1.compute.amazonaws.com:9680
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 0";
 
-            //            string[] string = message.Split(Environment.NewLine,
-            //                                StringSplitOptions.RemoveEmptyEntries);
+            char[] delims = new[] { '\r', '\n' };
+            string[] stringg = liness.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+            string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
 
-            //            Console.WriteLine(String.Join(',', string));
-            //            Console.ReadLine();
+            foreach (var word in stringg)
+            {
+                Console.WriteLine($"{word},");
+            }
 
-            //            string lines = @"Split
-            //This
-            //String";
-
-            //            char[] delims = new[] { '\r', '\n' };
-            //            string[] strings = lines.Split(delims, StringSplitOptions.RemoveEmptyEntries);
-
-            //            Console.WriteLine(String.Join(',', strings));
-            //            Console.ReadLine();
-
-            //https://www.techiedelight.com/split-string-on-newlines-csharp/
+            Console.ReadLine();
             #endregion
 
         }
