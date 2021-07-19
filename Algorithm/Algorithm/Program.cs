@@ -422,23 +422,15 @@ namespace Algorithm
             // char[] delims = new[] { '\r', '\n' };
             //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
 
-            string liness = @"Incoming: POST /?Key=Split%0AThis%0AString%22 HTTP/1.1
-User-Agent: PostmanRuntime/7.28.2
-Accept: */*
-Postman-Token: b349fea9-ead3-4d38-ba20-de1c94a9da6b
-Host: ec2-54-93-235-248.eu-central-1.compute.amazonaws.com:9680
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Content-Length: 0";
+            string liness = @"*SCOR,OM,861522046166469,L1,0,0,1623230143,0#";
 
 
             
-            string[] words = liness.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+            string[] words = liness.Split(',', StringSplitOptions.RemoveEmptyEntries);
             foreach (var word in words)
             {
-                Console.WriteLine($"{word},");
+                Console.Write($"{word},");
             }
-
             Console.ReadLine();
             #endregion
 
