@@ -432,6 +432,25 @@ namespace Algorithm
                 Console.Write($"{word},");
             }
             Console.ReadLine();
+
+            //Console.WriteLine("Incoming: " + message);
+
+            //char[] delims = new[] { '\r', '\n' };
+            //string[] strings = message.Split(delims, StringSplitOptions.RemoveEmptyEntries);
+            //Console.WriteLine(String.Join(',', strings));
+
+            //string[] stringg = message.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+            //Console.WriteLine(String.Join(',', stringg));
+
+            //string[] words = message.Split('\n', StringSplitOptions.RemoveEmptyEntries);
+            //foreach (var word in words)
+            //{
+            //    Console.Write($"{word},");
+            //}
+            //Console.WriteLine(String.Join(',', words));
+            //string[] stringg = message.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+            //Console.WriteLine(String.Join(',', words));
+
             #endregion
 
         }
