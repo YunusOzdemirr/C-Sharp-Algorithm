@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace Algorithm
 {
@@ -422,16 +423,16 @@ namespace Algorithm
             // char[] delims = new[] { '\r', '\n' };
             //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
 
-            string liness = @"*SCOR,OM,861522046166469,L1,0,0,1623230143,0#";
+            //string liness = @"*SCOR,OM,861522046166469,L1,0,0,1623230143,0#";
 
 
-            
-            string[] words = liness.Split(',', StringSplitOptions.RemoveEmptyEntries);
-            foreach (var word in words)
-            {
-                Console.Write($"{word},");
-            }
-            Console.ReadLine();
+
+            //string[] words = liness.Split(',', StringSplitOptions.RemoveEmptyEntries);
+            //foreach (var word in words)
+            //{
+            //    Console.Write($"{word},");
+            //}
+            //Console.ReadLine();
 
             //Console.WriteLine("Incoming: " + message);
 
@@ -453,6 +454,48 @@ namespace Algorithm
 
             #endregion
 
+            #region Gün Sayımı
+
+            int gun = 0, hafta = 0, ay = 0, yıl = 0;
+            string sonuc = "";
+
+            for (int i = 1; ; i++)
+            {
+                if (durdur == true)
+                {
+                    Console.Clear();
+                    sonuc = "Gün :" + gun + "\nHafta :" + hafta + "\nAy :" + ay + "\nYıl :" + yıl;
+                    Console.WriteLine("Gün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
+                    Console.ReadLine();
+                    break;
+                }
+                gun++;
+                if (gun % 7 == 0)
+                {
+                    hafta++;
+                }
+                if (gun % 30 == 0)
+                {
+                    ay++;
+                }
+                if (gun % 365 == 0)
+                {
+                    yıl++;
+                }
+                Thread th = new Thread(basıldımı); th.Start();
+                Console.WriteLine("Gün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
+            }
+            #endregion
+
+
+
+        }
+        public static bool durdur = false;
+        public static void basıldımı()
+        {
+            var veri = Console.ReadKey();
+            if (veri != null)
+                durdur = true;
         }
     }
 }
