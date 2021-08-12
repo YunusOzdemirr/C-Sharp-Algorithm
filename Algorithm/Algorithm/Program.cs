@@ -459,14 +459,17 @@ namespace Algorithm
             int gun = 0, hafta = 0, ay = 0, yıl = 0;
             string sonuc = "";
 
-            for (int i = 1; ; i++)
+            for (int i = 0; i>-1; i++)
             {
+                //string line = Console.ReadLine();
+                //if (string.IsNullOrEmpty(line))
+                //    gun++;
+                
                 if (durdur == true)
                 {
                     Console.Clear();
                     sonuc = "Gün :" + gun + "\nHafta :" + hafta + "\nAy :" + ay + "\nYıl :" + yıl;
                     Console.WriteLine("Gün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
-                    Console.ReadLine();
                     break;
                 }
                 gun++;
@@ -483,7 +486,7 @@ namespace Algorithm
                     yıl++;
                 }
                 Thread th = new Thread(basıldımı); th.Start();
-                Console.WriteLine("Gün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
+                Console.WriteLine("GGün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
             }
             #endregion
 
