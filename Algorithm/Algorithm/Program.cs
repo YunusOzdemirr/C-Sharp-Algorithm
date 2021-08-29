@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -400,16 +401,16 @@ namespace Algorithm
             //    "deneme ke";
 
             //string[] textSplit = text.Split("\n");
+            //string[] textSplit = text.Split(" ");
             //Console.WriteLine(textSplit);
-            ////Console.WriteLine(text.Split(","));
-            ////Console.WriteLine(String.Join(Environment.NewLine, textSplit));
-            ////Console.WriteLine(Encoding.Default.GetString(textSplit));
-            ////Console.WriteLine(Encoding.UTF8.GetString(textSplit));
+            //Console.WriteLine(text.Split(","));
+            //Console.WriteLine(String.Join(Environment.NewLine, textSplit));
+            //Console.WriteLine(Encoding.Default.GetString(textSplit));
+            //Console.WriteLine(Encoding.UTF8.GetString(textSplit));
             //foreach (var item in textSplit)
             //{
             //    Console.WriteLine(item);
             //}
-            //Console.ReadLine();
 
             //if len(messageArray) > 4 and messageArray[0] == "*SCOR" and messageArray[1] == "ID":
             //                        imei = messageArray[2]
@@ -419,20 +420,82 @@ namespace Algorithm
             //This
             //String";
 
-            //bu satırda aynı işlevi görüyor
-            // char[] delims = new[] { '\r', '\n' };
-            //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
+            // bu satırda aynı işlevi görüyor
+            //char[] delims = new[] { '\r', '\n' };
 
             //string liness = @"*SCOR,OM,861522046166469,L1,0,0,1623230143,0#";
+            //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
+
+            //string liness = @"a b c d-e-f%g";
+            string liness = @"cats AND*Dogs-are Awesome";
+            char[] delims = new[] { '-', '-', '_', '-', '%', ' ', '*' };
+            string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
+            for (int k = 0; k < words.Length; k++)
+            {
+                if (k == 0)
+                {
+                    words[k] = words[k].ToLower();
+                }
+                //Console.WriteLine(words[k][0]);
+                if (k != 0)
+                {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    
+                    words[k]= stringBuilder.Append(words[k].Substring(0, 1).ToUpper()).Append(words[k].Substring(1).ToLower()).ToString();
+
+                    
 
 
 
-            //string[] words = liness.Split(',', StringSplitOptions.RemoveEmptyEntries);
+                    //char[] charArray = words[k].ToCharArray();
+                    //charArray[0] = Char.ToUpper(charArray[0]);
+                    //for (int i = 1; i < charArray.Length; i++)
+                    //{
+                    //    charArray[i] = Char.ToLower(charArray[i]);
+                    //    //words[k][i] = words[k][i].ToString().ToLower();
+
+                    //}
+                    //words[k] = charArray[k].ToString();
+
+
+                }
+                Console.Write(words[k]);
+                //Console.Write(words[k]);
+
+                //Console.Write(words[k]);
+                //if (words[0] !=words[k])
+                //{
+                //    Console.Write($"{wordArray[0]}");
+                //    for (int i = 1; i < wordArray.Length; i++)
+                //    {
+                //        Console.Write($"{wordArray[i].ToString().ToLower()}");
+                //    }
+                //}
+                //else
+                //{
+                //    Console.Write($"{words[4]}");
+                //    Console.Write($"{wordArray[0].ToString().ToUpper()}");
+                //    for (int i = 1; i < wordArray.Length; i++)
+                //    {
+                //        Console.Write($"{wordArray[i].ToString().ToLower()}");
+                //    }
+                //}
+
+            }
             //foreach (var word in words)
             //{
-            //    Console.Write($"{word},");
+            //    //words[0].Substring(0, 1);
+            //    //Console.WriteLine(words[0].Substring(0, 1));
+
+            //    //Console.WriteLine(word);
+            //    //if (wordArray[0]=='a')
+            //    //{
+            //    //    Console.Write($"{wordArray[0]}");
+            //    //}
             //}
-            //Console.ReadLine();
+
+
+            Console.ReadLine();
 
             //Console.WriteLine("Incoming: " + message);
 
@@ -456,50 +519,49 @@ namespace Algorithm
 
             #region Gün Sayımı
 
-            int gun = 0, hafta = 0, ay = 0, yıl = 0;
-            string sonuc = "";
+            //int gun = 0, hafta = 0, ay = 0, yıl = 0;
+            //string sonuc = "";
 
-            for (int i = 0; i>-1; i++)
-            {
-                //string line = Console.ReadLine();
-                //if (string.IsNullOrEmpty(line))
-                //    gun++;
-                
-                if (durdur == true)
-                {
-                    Console.Clear();
-                    sonuc = "Gün :" + gun + "\nHafta :" + hafta + "\nAy :" + ay + "\nYıl :" + yıl;
-                    Console.WriteLine("Gün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
-                    break;
-                }
-                gun++;
-                if (gun % 7 == 0)
-                {
-                    hafta++;
-                }
-                if (gun % 30 == 0)
-                {
-                    ay++;
-                }
-                if (gun % 365 == 0)
-                {
-                    yıl++;
-                }
-                Thread th = new Thread(basıldımı); th.Start();
-                Console.WriteLine("GGün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
-            }
+            //for (int i = 0; i>-1; i++)
+            //{
+            //    //string line = Console.ReadLine();
+            //    //if (string.IsNullOrEmpty(line))
+            //    //    gun++;
+            //    if (durdur == true)
+            //    {
+            //        Console.Clear();
+            //        sonuc = "Gün :" + gun + "\nHafta :" + hafta + "\nAy :" + ay + "\nYıl :" + yıl;
+            //        Console.WriteLine("Gün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
+            //        break;
+            //    }
+            //    gun++;
+            //    if (gun % 7 == 0)
+            //    {
+            //        hafta++;
+            //    }
+            //    if (gun % 30 == 0)
+            //    {
+            //        ay++;
+            //    }
+            //    if (gun % 365 == 0)
+            //    {
+            //        yıl++;
+            //    }
+            //    Thread th = new Thread(basıldımı); th.Start();
+            //    Console.WriteLine("GGün :{0} Hafta :{1} Ay :{2} Yıl :{3}", gun, hafta, ay, yıl);
+            //}
             #endregion
 
 
 
         }
-        public static bool durdur = false;
-        public static void basıldımı()
-        {
-            var veri = Console.ReadKey();
-            if (veri != null)
-                durdur = true;
-        }
+        //public static bool durdur = false;
+        //public static void basıldımı()
+        //{
+        //    var veri = Console.ReadKey();
+        //    if (veri != null)
+        //        durdur = true;
+        //}
     }
 }
 
