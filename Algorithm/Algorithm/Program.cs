@@ -426,76 +426,7 @@ namespace Algorithm
             //string liness = @"*SCOR,OM,861522046166469,L1,0,0,1623230143,0#";
             //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
 
-            //string liness = @"a b c d-e-f%g";
-            string liness = @"cats AND*Dogs-are Awesome";
-            char[] delims = new[] { '-', '-', '_', '-', '%', ' ', '*' };
-            string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
-            for (int k = 0; k < words.Length; k++)
-            {
-                if (k == 0)
-                {
-                    words[k] = words[k].ToLower();
-                }
-                //Console.WriteLine(words[k][0]);
-                if (k != 0)
-                {
-                    StringBuilder stringBuilder = new StringBuilder();
-                    
-                    words[k]= stringBuilder.Append(words[k].Substring(0, 1).ToUpper()).Append(words[k].Substring(1).ToLower()).ToString();
 
-                    
-
-
-
-                    //char[] charArray = words[k].ToCharArray();
-                    //charArray[0] = Char.ToUpper(charArray[0]);
-                    //for (int i = 1; i < charArray.Length; i++)
-                    //{
-                    //    charArray[i] = Char.ToLower(charArray[i]);
-                    //    //words[k][i] = words[k][i].ToString().ToLower();
-
-                    //}
-                    //words[k] = charArray[k].ToString();
-
-
-                }
-                Console.Write(words[k]);
-                //Console.Write(words[k]);
-
-                //Console.Write(words[k]);
-                //if (words[0] !=words[k])
-                //{
-                //    Console.Write($"{wordArray[0]}");
-                //    for (int i = 1; i < wordArray.Length; i++)
-                //    {
-                //        Console.Write($"{wordArray[i].ToString().ToLower()}");
-                //    }
-                //}
-                //else
-                //{
-                //    Console.Write($"{words[4]}");
-                //    Console.Write($"{wordArray[0].ToString().ToUpper()}");
-                //    for (int i = 1; i < wordArray.Length; i++)
-                //    {
-                //        Console.Write($"{wordArray[i].ToString().ToLower()}");
-                //    }
-                //}
-
-            }
-            //foreach (var word in words)
-            //{
-            //    //words[0].Substring(0, 1);
-            //    //Console.WriteLine(words[0].Substring(0, 1));
-
-            //    //Console.WriteLine(word);
-            //    //if (wordArray[0]=='a')
-            //    //{
-            //    //    Console.Write($"{wordArray[0]}");
-            //    //}
-            //}
-
-
-            Console.ReadLine();
 
             //Console.WriteLine("Incoming: " + message);
 
@@ -552,8 +483,80 @@ namespace Algorithm
             //}
             #endregion
 
+            #region camel Case Method
+            //string liness = @"a b c d-e-f%g";
+            string liness = @"cats AND*Dogs-are Awesome";
+            char[] delims = new[] { '-', '_', '%', ' ', '*' };
+            string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
+            //for (int k = 0; k < words.Length; k++)
+            //{
+            //    if (k == 0)
+            //    {
+            //        words[k] = words[k].ToLower();
+            //    }
+            //    //Console.WriteLine(words[k][0]);
+            //    if (k != 0)
+            //    {
+            //        StringBuilder stringBuilder = new StringBuilder();
+            //        words[k] = stringBuilder.Append(words[k].Substring(0, 1).ToUpper()).Append(words[k].Substring(1).ToLower()).ToString();
+            //    }
+            //    Console.Write(words[k]);
+
+            //}
+            //Console.ReadLine();
 
 
+            #endregion
+            #region camel Case Brute Force
+            //string liness = @"a b c d-e-f%g";
+            //string liness = @"cats AND*Dogs-are Awesome";
+            //char[] delims = new[] { '-', '_', '%', ' ', '*' };
+            //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
+            for (int k = 0; k < words.Length; k++)
+            {
+                char[] charArray= words[k].ToCharArray();
+                //charArray[0] = Char.ToUpper(charArray[0]);
+                //for (int i = 1; i < charArray.Length; i++)
+                //{
+                //    charArray[i] = Char.ToLower(charArray[i]);
+                //    //words[k][i] = words[k][i].ToString().ToLower();
+                //}
+                //words[k] = charArray[k].ToString();
+                if (k==0)
+                {
+                    Console.Write($"{charArray[0]}");
+                    for (int i = 1; i < charArray.Length; i++)
+                    {
+                        Console.Write($"{charArray[i].ToString().ToLower()}");
+                    }
+                }
+                else
+                {
+                    Console.Write($"{charArray[0].ToString().ToUpper()}");
+                    for (int i = 1; i < charArray.Length; i++)
+                    {
+                        Console.Write($"{charArray[i].ToString().ToLower()}");
+                    }
+                }
+
+            }
+            //foreach (var word in words)
+            //{
+            //    //words[0].Substring(0, 1);
+            //    //Console.WriteLine(words[0].Substring(0, 1));
+
+            //    //Console.WriteLine(word);
+            //    //if (wordArray[0]=='a')
+            //    //{
+            //    //    Console.Write($"{wordArray[0]}");
+            //    //}
+            //}
+
+
+            Console.ReadLine();
+
+
+            #endregion
         }
         //public static bool durdur = false;
         //public static void basıldımı()
