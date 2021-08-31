@@ -175,7 +175,7 @@ namespace Algorithm
             //    for (int i = 0; i < array.Length; i++)
             //    {
             //        sayac2++;
-            //        for (int j = 0; j < array.Length; j++)
+            //for (int j = 0; j < array.Length; j++)
             //        {
             //            if (array.Length != array.Length)
             //            {
@@ -231,37 +231,37 @@ namespace Algorithm
             #endregion
 
             #region algoritma4
-            //string[] alfabe = { "A", "B", "C", "Ç", "D", "E", "F", "G", "Ğ", "H", "İ", "I", "J", "K", "L", "M", "N", "O", "Ö", "P", "R", "S", "Ş", "T", "U", "Ü", "V", "Y", "Z" };
-            //List<string> değerler = new List<string>();
-            //int konsoltemizlesayac = 0;
-            //for (int harf = 0; alfabe.Length > harf; harf++)
-            //{
-            //    değerler.Add(alfabe[harf]);
-            //    Console.WriteLine(alfabe[harf]);
-            //}
-            //for (int a = 1; ; a++)
-            //{
-            //    for (int b = 1; b < a; b++)
-            //    {
-            //        List<string> yenidegerler = new List<string>();
-            //        foreach (string değer in değerler)
-            //        {
-            //            for (int harf = 0; alfabe.Length > harf; harf++)
-            //            {
-            //                string sonuç = değer + alfabe[harf];
-            //                yenidegerler.Add(sonuç);
-            //                Console.WriteLine(sonuç);
-            //                konsoltemizlesayac++;
-            //                if (konsoltemizlesayac >= 99999)
-            //                {
-            //                    Console.Clear();
-            //                    konsoltemizlesayac = 0;
-            //                }
-            //            }
-            //        }
-            //        değerler = yenidegerler;
-            //    }
-            //}
+            string[] alfabe = { "A", "B", "C", "Ç", "D", "E", "F", "G", "Ğ", "H", "İ", "I", "J", "K", "L", "M", "N", "O", "Ö", "P", "R", "S", "Ş", "T", "U", "Ü", "V", "Y", "Z" };
+            List<string> değerler = new List<string>();
+            int konsoltemizlesayac = 0;
+            for (int harf = 0; alfabe.Length > harf; harf++)
+            {
+                değerler.Add(alfabe[harf]);
+                Console.WriteLine(alfabe[harf]);
+            }
+            for (int a = 1; ; a++)
+            {
+                for (int b = 1; b < a; b++)
+                {
+                    List<string> yenidegerler = new List<string>();
+                    foreach (string değer in değerler)
+                    {
+                        for (int harf = 0; alfabe.Length > harf; harf++)
+                        {
+                            string sonuç = değer + alfabe[harf];
+                            yenidegerler.Add(sonuç);
+                            Console.WriteLine(sonuç);
+                            konsoltemizlesayac++;
+                            if (konsoltemizlesayac >= 99999)
+                            {
+                                Console.Clear();
+                                konsoltemizlesayac = 0;
+                            }
+                        }
+                    }
+                    değerler = yenidegerler;
+                }
+            }
             #endregion
 
             #region algoritma5
@@ -512,34 +512,37 @@ namespace Algorithm
             //string liness = @"cats AND*Dogs-are Awesome";
             //char[] delims = new[] { '-', '_', '%', ' ', '*' };
             //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
-            for (int k = 0; k < words.Length; k++)
-            {
-                char[] charArray= words[k].ToCharArray();
-                //charArray[0] = Char.ToUpper(charArray[0]);
-                //for (int i = 1; i < charArray.Length; i++)
-                //{
-                //    charArray[i] = Char.ToLower(charArray[i]);
-                //    //words[k][i] = words[k][i].ToString().ToLower();
-                //}
-                //words[k] = charArray[k].ToString();
-                if (k==0)
-                {
-                    Console.Write($"{charArray[0]}");
-                    for (int i = 1; i < charArray.Length; i++)
-                    {
-                        Console.Write($"{charArray[i].ToString().ToLower()}");
-                    }
-                }
-                else
-                {
-                    Console.Write($"{charArray[0].ToString().ToUpper()}");
-                    for (int i = 1; i < charArray.Length; i++)
-                    {
-                        Console.Write($"{charArray[i].ToString().ToLower()}");
-                    }
-                }
+            //for (int k = 0; k < words.Length; k++)
+            //{
+            //    char[] charArray= words[k].ToCharArray();
+            //    //charArray[0] = Char.ToUpper(charArray[0]);
+            //    //for (int i = 1; i < charArray.Length; i++)
+            //    //{
+            //    //    charArray[i] = Char.ToLower(charArray[i]);
+            //    //    //words[k][i] = words[k][i].ToString().ToLower();
+            //    //}
+            //    //words[k] = charArray[k].ToString();
+            //    if (k==0)
+            //    {
+            //        Console.Write($"{charArray[0]}");
+            //        for (int i = 1; i < charArray.Length; i++)
+            //        {
+            //            Console.Write($"{charArray[i].ToString().ToLower()}");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Console.Write($"{charArray[0].ToString().ToUpper()}");
+            //        for (int i = 1; i < charArray.Length; i++)
+            //        {
+            //            Console.Write($"{charArray[i].ToString().ToLower()}");
+            //        }
+            //    }
 
-            }
+            //}
+
+
+
             //foreach (var word in words)
             //{
             //    //words[0].Substring(0, 1);

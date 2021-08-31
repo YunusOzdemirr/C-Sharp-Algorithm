@@ -1,9 +1,7 @@
-﻿<Properties StartupConfiguration="{4F4D4E40-11B9-4361-B655-EE4ADFFB0788}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Algorithm/Program.cs">
+﻿<Properties StartupConfiguration="{63E59A07-22BC-4DEB-B840-02678554BE83}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Algorithm/Program.cs" />
-      <File FileName="Algorithm/mono_crash.11a67480d0.1.json" />
-      <File FileName="Algorithm/mono_crash.11a67480d0.0.json" />
+      <File FileName="Program.cs" Line="186" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
