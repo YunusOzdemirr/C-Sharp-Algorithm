@@ -231,37 +231,37 @@ namespace Algorithm
             #endregion
 
             #region algoritma4
-            string[] alfabe = { "A", "B", "C", "Ç", "D", "E", "F", "G", "Ğ", "H", "İ", "I", "J", "K", "L", "M", "N", "O", "Ö", "P", "R", "S", "Ş", "T", "U", "Ü", "V", "Y", "Z" };
-            List<string> değerler = new List<string>();
-            int konsoltemizlesayac = 0;
-            for (int harf = 0; alfabe.Length > harf; harf++)
-            {
-                değerler.Add(alfabe[harf]);
-                Console.WriteLine(alfabe[harf]);
-            }
-            for (int a = 1; ; a++)
-            {
-                for (int b = 1; b < a; b++)
-                {
-                    List<string> yenidegerler = new List<string>();
-                    foreach (string değer in değerler)
-                    {
-                        for (int harf = 0; alfabe.Length > harf; harf++)
-                        {
-                            string sonuç = değer + alfabe[harf];
-                            yenidegerler.Add(sonuç);
-                            Console.WriteLine(sonuç);
-                            konsoltemizlesayac++;
-                            if (konsoltemizlesayac >= 99999)
-                            {
-                                Console.Clear();
-                                konsoltemizlesayac = 0;
-                            }
-                        }
-                    }
-                    değerler = yenidegerler;
-                }
-            }
+            //string[] alfabe = { "A", "B", "C", "Ç", "D", "E", "F", "G", "Ğ", "H", "İ", "I", "J", "K", "L", "M", "N", "O", "Ö", "P", "R", "S", "Ş", "T", "U", "Ü", "V", "Y", "Z" };
+            //List<string> değerler = new List<string>();
+            //int konsoltemizlesayac = 0;
+            //for (int harf = 0; alfabe.Length > harf; harf++)
+            //{
+            //    değerler.Add(alfabe[harf]);
+            //    Console.WriteLine(alfabe[harf]);
+            //}
+            //for (int a = 1; ; a++)
+            //{
+            //    for (int b = 1; b < a; b++)
+            //    {
+            //        List<string> yenidegerler = new List<string>();
+            //        foreach (string değer in değerler)
+            //        {
+            //            for (int harf = 0; alfabe.Length > harf; harf++)
+            //            {
+            //                string sonuç = değer + alfabe[harf];
+            //                yenidegerler.Add(sonuç);
+            //                Console.WriteLine(sonuç);
+            //                konsoltemizlesayac++;
+            //                if (konsoltemizlesayac >= 99999)
+            //                {
+            //                    Console.Clear();
+            //                    konsoltemizlesayac = 0;
+            //                }
+            //            }
+            //        }
+            //        değerler = yenidegerler;
+            //    }
+            //}
             #endregion
 
             #region algoritma5
@@ -485,9 +485,9 @@ namespace Algorithm
 
             #region camel Case Method
             //string liness = @"a b c d-e-f%g";
-            string liness = @"cats AND*Dogs-are Awesome";
-            char[] delims = new[] { '-', '_', '%', ' ', '*' };
-            string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
+            //string liness = @"cats AND*Dogs-are Awesome";
+            //char[] delims = new[] { '-', '_', '%', ' ', '*' };
+            //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
             //for (int k = 0; k < words.Length; k++)
             //{
             //    if (k == 0)
@@ -514,7 +514,7 @@ namespace Algorithm
             //string[] words = liness.Split(delims, StringSplitOptions.TrimEntries);
             //for (int k = 0; k < words.Length; k++)
             //{
-            //    char[] charArray= words[k].ToCharArray();
+            //    char[] charArray = words[k].ToCharArray();
             //    //charArray[0] = Char.ToUpper(charArray[0]);
             //    //for (int i = 1; i < charArray.Length; i++)
             //    //{
@@ -522,7 +522,7 @@ namespace Algorithm
             //    //    //words[k][i] = words[k][i].ToString().ToLower();
             //    //}
             //    //words[k] = charArray[k].ToString();
-            //    if (k==0)
+            //    if (k == 0)
             //    {
             //        Console.Write($"{charArray[0]}");
             //        for (int i = 1; i < charArray.Length; i++)
@@ -556,9 +556,47 @@ namespace Algorithm
             //}
 
 
-            Console.ReadLine();
+            //Console.ReadLine();
 
 
+            #endregion
+
+            #region Ref keywordü ile örnek
+
+            // ref olmadan
+
+            int originalValue = 43;
+
+            Console.WriteLine("ChangeMethod'dan önce: " + originalValue);//Output 43
+
+            ChangeMethod(1, 3, originalValue);
+
+            Console.WriteLine("ChangeMethod'dan sonra: " + originalValue); //Output 43
+
+            static void ChangeMethod(int x, int y, int i)
+            {
+                i = i + x + y;//47
+            }
+
+            // ref ile
+            int originalValueWithRef = 43;
+
+            Console.WriteLine("ChangeMethod'dan önce: " + originalValueWithRef);//Output 43
+
+            ChangeMethodWithRef(1, 3, ref originalValueWithRef);
+
+            Console.WriteLine("ChangeMethod'dan sonra: " + originalValueWithRef); //Output 47
+
+            static void ChangeMethodWithRef (int x, int y, ref int i)
+            {
+                i = i + x + y;//47
+            }
+
+            //çıktı ise şöyle oluyor
+            //ChangeMethod'dan önce: 43
+            //ChangeMethod'dan sonra: 43
+            //ChangeMethod'dan önce: 43
+            //ChangeMethod'dan sonra: 47
             #endregion
         }
         //public static bool durdur = false;

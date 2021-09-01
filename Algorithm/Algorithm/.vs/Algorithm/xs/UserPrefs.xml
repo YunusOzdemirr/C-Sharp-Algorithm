@@ -1,19 +1,8 @@
 ﻿<Properties StartupConfiguration="{63E59A07-22BC-4DEB-B840-02678554BE83}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="186" Column="16" />
+      <File FileName="Program.cs" Line="559" Column="15" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Algorithm" expanded="True">
-            <Node name="Algorithm" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Algorithm PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
