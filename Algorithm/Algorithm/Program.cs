@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -575,7 +576,7 @@ namespace Algorithm
 
             static void ChangeMethod(int x, int y, int i)
             {
-                i = i + x + y;//47
+                i = i + x + y;//43
             }
 
             // ref ile
@@ -597,6 +598,23 @@ namespace Algorithm
             //ChangeMethod'dan sonra: 43
             //ChangeMethod'dan önce: 43
             //ChangeMethod'dan sonra: 47
+            #endregion
+
+            #region Dispose örneği
+            FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
+            try
+            {
+                fileSystemWatcher= new FileSystemWatcher("/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                fileSystemWatcher.Dispose();
+            }
+            Console.ReadLine();
             #endregion
         }
         //public static bool durdur = false;
