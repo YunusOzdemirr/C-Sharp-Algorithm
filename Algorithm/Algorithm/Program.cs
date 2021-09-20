@@ -588,7 +588,7 @@ namespace Algorithm
 
             Console.WriteLine("ChangeMethod'dan sonra: " + originalValueWithRef); //Output 47
 
-            static void ChangeMethodWithRef (int x, int y, ref int i)
+            static void ChangeMethodWithRef(int x, int y, ref int i)
             {
                 i = i + x + y;//47
             }
@@ -604,7 +604,7 @@ namespace Algorithm
             FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
             try
             {
-                fileSystemWatcher= new FileSystemWatcher("/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/");
+                fileSystemWatcher = new FileSystemWatcher("/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/");
             }
             catch (Exception ex)
             {
@@ -616,14 +616,92 @@ namespace Algorithm
             }
             Console.ReadLine();
             #endregion
-        }
-        //public static bool durdur = false;
-        //public static void basıldımı()
-        //{
-        //    var veri = Console.ReadKey();
-        //    if (veri != null)
-        //        durdur = true;
-        //}
-    }
-}
 
+            #region İki sayıyı toplama hackerrank first algorithm
+            int x = Convert.ToInt32(Console.ReadLine());
+            bool status = true;
+            while (status)
+            {
+                if (x.GetType() != typeof(int))
+                {
+                    Console.WriteLine("gecerli bir sayi giriniz.");
+                }
+                else if (x > 1000 || x < 0)
+                {
+                    Console.WriteLine("gecerli bir sayi giriniz.");
+                }
+                else
+                {
+                    status = false;
+                }
+            }
+            int y = Convert.ToInt32(Console.ReadLine());
+            status = true;
+            while (status)
+            {
+                if (y.GetType() != typeof(int))
+                {
+                    Console.WriteLine("gecerli sayi giriniz.");
+                }
+                else if (y > 1000 || y < 1)
+                {
+                    Console.WriteLine("gecerli sayi giriniz.");
+                }
+                else
+                {
+                    status = false;
+                }
+            };
+            MathMethod(x, y);
+            #region benim yöntemim
+
+
+            //TryAgainForX:
+            //    Console.WriteLine("Bir x sayısı giriniz 1'in altında ve 1000'in üzerinde olmasın");
+            //    int x = Convert.ToInt32(Console.ReadLine());
+            //    if (x.GetType() != typeof(int))
+            //    {
+            //        Console.WriteLine("Lütfen bir sayı giriniz.");
+            //        goto TryAgainForX;
+            //    }
+            //    else if (x > 1000 || x < 0)
+            //    {
+            //        Console.WriteLine("Lütfen geçerli bir sayı giriniz.");
+            //        goto TryAgainForX;
+            //    }
+
+            //TryAgainForY:
+            //    Console.WriteLine("Bir y sayısı giriniz 1'in altında ve 1000'in üzerinde olmasın");
+            //    int y = Convert.ToInt32(Console.ReadLine());
+
+            //    if (y.GetType() != typeof(int))
+            //    {
+
+            //        Console.WriteLine("Lütfen bir sayı giriniz.");
+            //        goto TryAgainForY;
+            //    }
+            //    else if (y > 1000 || y < 1)
+            //    {
+            //        Console.WriteLine("Lütfen geçerli bir sayı giriniz.");
+            //        goto TryAgainForY;
+            //    }
+
+            //    Console.WriteLine(x + y);
+
+
+            //    #endregion
+            //}
+            #endregion
+
+            #endregion
+
+
+
+        }
+        static int MathMethod(int x, int y)
+        {
+            return x + y;
+        }
+    }
+
+}
