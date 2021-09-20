@@ -618,43 +618,6 @@ namespace Algorithm
             #endregion
 
             #region İki sayıyı toplama hackerrank first algorithm
-            int x = Convert.ToInt32(Console.ReadLine());
-            bool status = true;
-            while (status)
-            {
-                if (x.GetType() != typeof(int))
-                {
-                    Console.WriteLine("gecerli bir sayi giriniz.");
-                }
-                else if (x > 1000 || x < 0)
-                {
-                    Console.WriteLine("gecerli bir sayi giriniz.");
-                }
-                else
-                {
-                    status = false;
-                }
-            }
-            int y = Convert.ToInt32(Console.ReadLine());
-            status = true;
-            while (status)
-            {
-                if (y.GetType() != typeof(int))
-                {
-                    Console.WriteLine("gecerli sayi giriniz.");
-                }
-                else if (y > 1000 || y < 1)
-                {
-                    Console.WriteLine("gecerli sayi giriniz.");
-                }
-                else
-                {
-                    status = false;
-                }
-            };
-            MathMethod(x, y);
-            #region benim yöntemim
-
 
             //TryAgainForX:
             //    Console.WriteLine("Bir x sayısı giriniz 1'in altında ve 1000'in üzerinde olmasın");
@@ -693,15 +656,29 @@ namespace Algorithm
             //}
             #endregion
 
+            #region Girilen texti arraya çevirip belirlenen kelimeleri çekmesi
+            string value="";
+            Console.WriteLine("Texti giriniz");
+            string line= Console.ReadLine();
+            Console.WriteLine("Seçilecek karakterleri giriniz");
+            string words =Console.ReadLine();
+            for (int i = 0; i < line.Length; i++)
+            {
+                for (int j = 0; j < words.Length; j++)
+                {
+                    if (line[i]==words[j])
+                    {
+                        if (!value.Contains(line[i]))
+                        {
+                            value += line[i];
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(value);
             #endregion
-
-
-
         }
-        static int MathMethod(int x, int y)
-        {
-            return x + y;
-        }
+
     }
 
 }
