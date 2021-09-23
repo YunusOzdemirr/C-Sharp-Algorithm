@@ -566,55 +566,55 @@ namespace Algorithm
 
             // ref olmadan
 
-            int originalValue = 43;
+            //int originalValue = 43;
 
-            Console.WriteLine("ChangeMethod'dan önce: " + originalValue);//Output 43
+            //Console.WriteLine("ChangeMethod'dan önce: " + originalValue);//Output 43
 
-            ChangeMethod(1, 3, originalValue);
+            //ChangeMethod(1, 3, originalValue);
 
-            Console.WriteLine("ChangeMethod'dan sonra: " + originalValue); //Output 43
+            //Console.WriteLine("ChangeMethod'dan sonra: " + originalValue); //Output 43
 
-            static void ChangeMethod(int x, int y, int i)
-            {
-                i = i + x + y;//43
-            }
+            //static void ChangeMethod(int x, int y, int i)
+            //{
+            //    i = i + x + y;//43
+            //}
 
-            // ref ile
-            int originalValueWithRef = 43;
+            //// ref ile
+            //int originalValueWithRef = 43;
 
-            Console.WriteLine("ChangeMethod'dan önce: " + originalValueWithRef);//Output 43
+            //Console.WriteLine("ChangeMethod'dan önce: " + originalValueWithRef);//Output 43
 
-            ChangeMethodWithRef(1, 3, ref originalValueWithRef);
+            //ChangeMethodWithRef(1, 3, ref originalValueWithRef);
 
-            Console.WriteLine("ChangeMethod'dan sonra: " + originalValueWithRef); //Output 47
+            //Console.WriteLine("ChangeMethod'dan sonra: " + originalValueWithRef); //Output 47
 
-            static void ChangeMethodWithRef(int x, int y, ref int i)
-            {
-                i = i + x + y;//47
-            }
+            //static void ChangeMethodWithRef(int x, int y, ref int i)
+            //{
+            //    i = i + x + y;//47
+            //}
 
-            //çıktı ise şöyle oluyor
-            //ChangeMethod'dan önce: 43
-            //ChangeMethod'dan sonra: 43
-            //ChangeMethod'dan önce: 43
-            //ChangeMethod'dan sonra: 47
-            #endregion
+            ////çıktı ise şöyle oluyor
+            ////ChangeMethod'dan önce: 43
+            ////ChangeMethod'dan sonra: 43
+            ////ChangeMethod'dan önce: 43
+            ////ChangeMethod'dan sonra: 47
+            //#endregion
 
-            #region Dispose örneği
-            FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
-            try
-            {
-                fileSystemWatcher = new FileSystemWatcher("/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
-            finally
-            {
-                fileSystemWatcher.Dispose();
-            }
-            Console.ReadLine();
+            //#region Dispose örneği
+            //FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
+            //try
+            //{
+            //    fileSystemWatcher = new FileSystemWatcher("/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex);
+            //}
+            //finally
+            //{
+            //    fileSystemWatcher.Dispose();
+            //}
+            //Console.ReadLine();
             #endregion
 
             #region İki sayıyı toplama hackerrank first algorithm
@@ -677,7 +677,21 @@ namespace Algorithm
             //}
             //Console.WriteLine(value);
             #endregion
+
+            #region New Keyword Test
+            //int abc = new int();
+            //abc = 100;
+            //Console.WriteLine(Add(ref abc));
+            //Console.WriteLine(abc);
+            //Console.Read();
+            //static int Add(ref int abc)
+            //{
+            //    abc = 120;
+            //    return abc;
+            //}
+            #endregion
         }
+        
 
     }
 
