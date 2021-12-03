@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{4F4D4E40-11B9-4361-B655-EE4ADFFB0788}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Algorithm/Program.cs">
     <Files>
-      <File FileName="Algorithm/Program.cs" Line="673" Column="1" />
+      <File FileName="Algorithm/Program.cs" Line="783" Column="9" />
       <File FileName="Algorithm/mono_crash.11a67480d0.1.json" Line="1" Column="1" />
       <File FileName="Algorithm/mono_crash.11a67480d0.0.json" Line="1" Column="1" />
     </Files>
@@ -9,11 +9,12 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Algorithm" expanded="True">
-            <Node name="Algorithm" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
+            <Node name="Algorithm" expanded="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -13,6 +13,7 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
+
             #region algoritma 1
             //List<char> chars = new List<char> { A, B, C, Ç, D, E, F, G, Ğ, H, İ, I, J, K, L, M, N, O, Ö, P, R, S, Ş, T, U, Ü, V, Y, Z };
             //, D = 132, E = 621, F = 901, G = 762, H = 123, I = 192, J = 382, K = 864, L = 875, M = 653, N = 520, O = 981, P = 766, R = 123, S = 991, T = 556, U = 412, V = 767, Y = 121, Z = 732 };
@@ -679,20 +680,131 @@ namespace Algorithm
             #endregion
 
             #region New Keyword Test
-            //int abc = new int();
-            //abc = 100;
-            //Console.WriteLine(Add(ref abc));
-            //Console.WriteLine(abc);
+            //int? abc = 100;
+            //bool? value=false;
+            //Console.WriteLine(abc.HasValue);
+            //Console.WriteLine(value.HasValue);
             //Console.Read();
-            //static int Add(ref int abc)
-            //{
-            //    abc = 120;
-            //    return abc;
-            //}
+
             #endregion
+
+
+            #region For Test
+            //// see https://aka.ms/new-console-template for more information
+            //string a = "#";
+            //for (int i = 0; i <= 6; i++)
+            //{
+            //    console.writeline(a);
+            //    if (i==6)
+            //    {
+            //        for (int j = 5; j > i; j--)
+            //        {
+            //            console.write(a);
+            //        }
+            //    }
+            //}
+            //console.read();
+
+            //int k = 1;
+            //for (int i = 1; i <= 7; i++)
+            //{
+
+            //    for (int j = 0; j < k; j++)
+            //    {
+            //        Console.Write("#");
+            //    }
+            //    Console.WriteLine();
+            //    if (i <= 3)
+            //        k++;
+            //    else
+            //        k--;
+            //}
+            //Console.ReadKey();
+
+            testBinary();
+            static void testBinary()
+            {
+                BinarySearch search = new BinarySearch();
+                int[] arr = { 1, 3, 5, 7, 9, 11, 49, 56, 64, 73, 41, 51, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 31, 32, 33, 34, 35, 36 };
+                int n = arr.Length;
+                int x = 1;
+                int result = search.binarySearch(arr, x);
+                if (result == -1)
+                    Console.WriteLine("Element not present");
+                else
+                    Console.WriteLine("Element found at "
+                                       + "index " + result);
+            }
+            #endregion
+
+
+
+
         }
-        
+        #region BinarySearch
+        class BinarySearch
+        {
+
+            public int binarySearch(int[] arr, int x)
+            {
+                int l = 0, r = arr.Length - 1;
+                while (l <= r)
+                {
+                    //    = 0+(4-0)/2  == 2
+                    //    = 3+(4-3)/2 ==3
+                    //    = 0+(29-0)/2==14
+                    int m = l + (r - l) / 2;
+                    int abc = (l + r) / 2;
+                    // m= 5+(10-5)/2
+                    //m=5+5/2
+                    //m=5+2.5
+                    //ortasını alıyor m değeri ortanca değer
+
+                    //x değeri ortanca değer mi kontrol et
+                    if (arr[m] == x)
+                        return m;
+
+                    // x ortanca değerden büyükse, sol yarıyı görmezden gelir
+                    if (arr[m] < x)
+                        l = m + 1;
+
+                    // x ortanca değerden küçükse, sağ yarıyı görmezden gelir
+                    else
+                        r = m - 1;
+                }
+
+                // x değeri dizide bulunamadıysa -1 değerini döner
+                return -1;
+            }
+
+        }
+        #endregion
+
+        #region Abstract Class and Class Different
+
+        abstract class Hayvan
+        {
+            public void Yuru()
+            {
+                Console.WriteLine("Yürüyorum");
+            }
+            public void Dur()
+            {
+                Console.WriteLine("Durdum");
+            }
+            public virtual void Naber() { }
+        };
+
+        class Kopek : Hayvan
+        {
+            public int isim { get; set; }
+            public override void Naber()
+            {
+                base.Naber(); ;
+            }
+        }
+        #endregion
 
     }
-
 }
+
