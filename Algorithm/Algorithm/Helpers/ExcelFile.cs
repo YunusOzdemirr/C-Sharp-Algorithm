@@ -16,12 +16,11 @@ namespace Algorithm.Helpers
                 {
                     File.Delete(path);
                 }
-
-                DataSet dataSet = new DataSet();
-                dataSet.Tables.Add(dataTable);
+                //excelWorkbook app(package)
                 var excelWorkBook = new XLWorkbook();
-
+                //datatable adding to worksheet
                 excelWorkBook.Worksheets.Add(dataTable);
+                //saving to specified path
                 excelWorkBook.SaveAs(path);
                 return excelWorkBook;
             }

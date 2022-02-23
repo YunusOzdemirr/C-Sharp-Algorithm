@@ -23,7 +23,6 @@ namespace Algorithm.Helpers
                 {
                     Text = @"Text of body"
                 };
-                ////var fromEmailPassword = "sisHS4590";
                 var smtpHost = "mail.test.com";
                 int smtpPort = 587;
 
@@ -33,7 +32,6 @@ namespace Algorithm.Helpers
                 client.AuthenticationMechanisms.Remove("XOAUTH2");
                 await client.AuthenticateAsync("noreply@test.com", "testpass");
 
-                // client.Authenticate("noreply@hissesinyal.com", "NOhs4590");
                 var attachment = new MimePart("excel", "excel")
                 {
                     Content = new MimeContent(File.OpenRead(path)),

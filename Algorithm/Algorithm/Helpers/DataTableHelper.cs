@@ -13,6 +13,7 @@ namespace Algorithm.Helpers
         {
             try
             {
+                //this line is setting the name of property to datatable
                 DataTable dataTable = new DataTable(typeof(User).Name);
                 PropertyInfo[] Props = typeof(User).GetProperties(BindingFlags.Public | BindingFlags.Instance);
                 //Setting column names as Property names
@@ -21,6 +22,7 @@ namespace Algorithm.Helpers
                 dataTable.Columns.Add("Mail");
                 foreach (var user in users)
                 {
+                    //this line is setting to propertyes in user
                     var values = new object[Props.Length];
                     for (int i = 0; i < Props.Length; i++)
                     {
