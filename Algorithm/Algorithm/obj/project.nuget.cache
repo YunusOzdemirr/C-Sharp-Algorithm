@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2VEuzpNsGa2MOo+2S32wShqtnysBk+jKKhSRy1ek2xexs75Fq61T5/EITS6fKUQ+Y2sgukM8vKZDvbtdNBogSg==",
+  "dgSpecHash": "0PA55Xbbc/MTAXrcB9ovdml/BIOS0mgOKeUVfUAx+cmjWZ1X2KJyXVYT2AKe1m6w7EoNqiw7+t2zUo94w4iajw==",
   "success": true,
   "projectFilePath": "/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/Algorithm.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/yunus/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
