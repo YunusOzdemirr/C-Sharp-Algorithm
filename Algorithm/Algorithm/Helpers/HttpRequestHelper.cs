@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace Algorithms
 {
-    public static class HttpRequest
+    public static class HttpRequestHelper
     {
         public static async Task<object> PostBearerToken()
         {

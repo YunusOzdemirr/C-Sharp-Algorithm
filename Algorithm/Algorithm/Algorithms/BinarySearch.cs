@@ -2,9 +2,9 @@ using System;
 
 namespace Algorithms
 {
-    public class BinarySearch
+    public static class BinarySearch
     {
-        public int binarySearch(int[] arr, int x)
+        public static int BinarySearchAlgorithm(int[] arr, int x)
         {
             int l = 0, r = arr.Length - 1;
             while (l <= r)
@@ -37,11 +37,10 @@ namespace Algorithms
         }
         static void testBinary()
         {
-            BinarySearch search = new BinarySearch();
             int[] arr = { 1, 3, 5, 7, 9, 11, 49, 56, 64, 73, 41, 51, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 31, 32, 33, 34, 35, 36 };
             int n = arr.Length;
             int x = 1;
-            int result = search.binarySearch(arr, x);
+            int result = BinarySearch.BinarySearchAlgorithm(arr, x);
             if (result == -1)
                 Console.WriteLine("Element not present");
             else
