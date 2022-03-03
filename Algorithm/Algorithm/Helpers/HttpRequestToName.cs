@@ -2,7 +2,7 @@ namespace Algorithm.Helpers
 {
     public static class HttpRequestToName
     {
-        public static void HttpRequestToName()
+        public static void HttpRequest()
         {
             // ReportModel model = new ReportModel();
 
