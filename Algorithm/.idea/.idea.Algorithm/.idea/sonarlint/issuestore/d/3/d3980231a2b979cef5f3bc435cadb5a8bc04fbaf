@@ -1,0 +1,8 @@
+
+xcsharpsquid:S1118"OAdd a 'protected' constructor or the 'static' keyword to the class declaration.(ä åşÿÿÿÿ8˜ôØÑÂ1
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ÅÃƒ¡ûÿÿÿÿ8ÈıÍÑÂ1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ŒÉŞÎ8ÉıÍÑÂ1
+†csharpsquid:S2386"]Use an immutable collection or reduce the accessibility of the public static field 'numbers'.(ÅÃƒ¡ûÿÿÿÿ8˜ôØÑÂ1
+…csharpsquid:S2386"aUse an immutable collection or reduce the accessibility of the public static field 'bannedChars'.(ŒÉŞÎ8˜ôØÑÂ1
+mcsharpsquid:S2223"DChange the visibility of 'numbers' or make it 'const' or 'readonly'.(ÅÃƒ¡ûÿÿÿÿ8˜ôØÑÂ1
+lcsharpsquid:S2223"HChange the visibility of 'bannedChars' or make it 'const' or 'readonly'.(ŒÉŞÎ8˜ôØÑÂ1

@@ -1,0 +1,8 @@
+
+Scsharpsquid:S1125"*Remove the unnecessary Boolean literal(s).(ÇÚ‰Õýÿÿÿÿ8†èã×Â1
+Scsharpsquid:S1125!"*Remove the unnecessary Boolean literal(s).(ÇÚ‰Õýÿÿÿÿ8”ˆì×Â1
+Ncsharpsquid:S1125-"*Remove the unnecessary Boolean literal(s).(æŠ³º8ß¤÷×Â1
+vcsharpsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(õ«ô´8óÄü×Â1
+icsharpsquid:S1854"ERemove this useless assignment to local variable 'startQuestionMark'.(‡¼È–8óÄü×Â1
+Ycsharpsquid:S1481
+"0Remove the unused local variable 'questionMark'.(£ŽÉÎûÿÿÿÿ8Þ×Ø×Â1
