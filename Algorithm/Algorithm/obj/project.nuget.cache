@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "91BiYxXxRs6KileB/zFJR9tQXDH8sgeovhtB4nR0qxTpqLtMcvhgBRLsWpBpAjdIEP3AnP+ps03AaXBONRbgMw==",
+  "dgSpecHash": "eu9qa8TSq7bKxIO05sLd+btyjEAj8JxoqZxXa3gE9UDccmc2vwis3PtV0DnlckCRvB4IUQM/qYSU9vD1wGim4g==",
   "success": true,
   "projectFilePath": "/Users/yunus/Documents/GitHub/C-Sharp-Algorithm/Algorithm/Algorithm/Algorithm.csproj",
   "expectedPackageFiles": [
@@ -89,7 +89,10 @@
     "/Users/yunus/.nuget/packages/system.threading.tasks.extensions/4.3.0/system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "/Users/yunus/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/yunus/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "/Users/yunus/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
+    "/Users/yunus/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
+    "/Users/yunus/.nuget/packages/microsoft.netcore.app.ref/6.0.15/microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "/Users/yunus/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.15/microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
+    "/Users/yunus/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.15/microsoft.netcore.app.host.osx-arm64.6.0.15.nupkg.sha512"
   ],
   "logs": []
 }
